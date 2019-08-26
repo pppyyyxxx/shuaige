@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: url(./timg.jpg) no-repeat;
+            background-size: cover;
+        }
+
+        #who {
+            width: 100%;
+            height: 700px;
+            position: absolute;
+            font-size: 300px;
+            text-align: center;
+            line-height: 500px;
+            color: #DAA520;
+        }
+
+        .main {
+            width: 1500px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 200px auto;
+        }
+
+        p {
+            width: 150px;
+            height: 170px;
+            text-align: center;
+            line-height: 170px;
+            margin: 0px;
+            padding: 0;
+            /* background: url(./timg.jpg) no-repeat;
+            background-size: 300px; */
+            background: transparent;
+            color: white;
+            font-size: 30px;
+        }
+
+        button {
+            position: absolute;
+            top: 800px;
+            left: 800px;
+            width: 200px;
+            height: 50px;
+            background: transparent;
+            color: white;
+            border: none;
+            font-size: 40px;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="who"></div>
+        <button type="button" id="a">抽取</button>
+    </div>
+    <div class="main">
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+
+
+
+
+    <script>
+        var name1 = ['吴云龙', '朱伟祺', '时山钧', '李彪', '吴燚波', '付凤云', '陈赞', '叶胜隆', '章辉', '闫诤', '徐泰彬', '吴雄睿', '邵挺', '姜铭', '毛文女',
+            '严敏', '王加晓', '谢寅楚', '蔡楚宏', '谢泽群', '郑梦圆', '尹娜', '周厚新', '王子豪', '蒋志伟', '刘锦哲', '周峰', '张圣荣', '无效重抽', '桂新阳']
+
+        var who = document.getElementById('who')
+        var a = document.getElementById('a')
+
+        var p = document.getElementsByTagName('p')
+        console.log(p)
+
+        for (var i = 0; i < p.length; i++) {
+            p[i].innerHTML = name1[i]
+        }
+
+
+        a.onclick = function () {
+            var o = Math.ceil(Math.random() * 30) - 1;
+            who.innerHTML = name1[o]
+        }
+
+        // console.log(name1[o])
+
+
+
+    </script>
+</body>
+
+</html>
